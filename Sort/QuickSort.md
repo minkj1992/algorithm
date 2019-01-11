@@ -10,6 +10,10 @@
 > `Divide and conquer`
 
 1. `piv` 고르기
+    - Always pick first element as pivot.
+    - Always pick last element as pivot (implemented below)
+    - Pick a random element as pivot.
+    - Pick median as pivot.
 2. `Divide` 
     - [left list] + piv + [right list]
     - `left=[i for i in li if i<=piv]`
@@ -20,7 +24,11 @@
  재귀 호출이 한번 진행될때, 최소 하나의 원소는 정렬된다. (Base를 만족할 수 있다.)
  
  
- # 코드
+# 코드
+```python
+
+```
+
  
 # 특징
  
@@ -34,6 +42,7 @@
         - worst case **n^2**이지만 avg **O(nlog₂n)**
     - 메모리 효율성 
         - **O(logn)**
+        
 - 단점
 **for worst case**
 <p align="center"><img src="https://gmlwjd9405.github.io/images/algorithm-quick-sort/sort-time-complexity-etc2.png"></p>
