@@ -11,13 +11,35 @@
 
 1. `piv` 고르기
 2. `Divide` 
-  - [left list] + piv + [right list]
-  - `left=[i for i in li if i<=piv]`
-3. `Conquer`, `Recursion` 
-  - 분할된 [left], [right]에 대해 `Recursive`하게 반복한다.
-  - `Base`: len(li)<=1
+    - [left list] + piv + [right list]
+    - `left=[i for i in li if i<=piv]`
+3. `Conquer`, `Recursion` , `Merge`
+    - 분할된 [left], [right]에 대해 `Recursive`하게 반복한다.
+    - `Base`: len(li)<=1
  
  재귀 호출이 한번 진행될때, 최소 하나의 원소는 정렬된다. (Base를 만족할 수 있다.)
+ 
+ 
+ # 코드
+ 
+# 특징
+ 
+- 장점
+
+**for best case**
+<p align="center"><img src="https://gmlwjd9405.github.io/images/algorithm-quick-sort/sort-time-complexity-etc1.png"></p>
+    
+    - 속도가 빠르다.
+        - 캐시히트, 지역화
+        - worst case **n^2**이지만 avg **O(nlog₂n)**
+    - 메모리 효율성 
+        - **O(logn)**
+- 단점
+**for worst case**
+<p align="center"><img src="https://gmlwjd9405.github.io/images/algorithm-quick-sort/sort-time-complexity-etc2.png"></p>
+
+    - 정렬된 리스트에 대해서는 퀵정렬의 불균형 분할에 의해 수행시간이 **O(n^2)** 
+ 
  
  
 
