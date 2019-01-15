@@ -78,3 +78,21 @@
 
     left_index = 2 * index + 1
     right_index = 2 * index + 2
+
+# Heapify
+
+# Heap Sort 
+
+> **O(nlogn)**
+
+1. 주어진 원소들로 최대 힙을 구성합니다.(heapify, O(logn))
+2. 최대 힙의 루트노드(=현재 배열의 첫번째 요소=최댓값)와 말단노드(=현재 배열의 마지막 요소)를 교환해 줍니다.
+3. 새 루트노드에 대해 최대 힙을 구성합니다.(heapify)
+4. 원소의 개수만큼 2와 3을 반복 수행합니다.O(n)
+
+
+
+
+
+
+[힙을 사용하는 이유](https://skydrm.wordpress.com/2009/10/31/%ED%9E%99-%EC%9E%A5%EC%A0%90%EA%B3%BC-%EB%8B%A8%EC%A0%90/)
