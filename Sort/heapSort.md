@@ -90,6 +90,40 @@
 3. 새 루트노드에 대해 최대 힙을 구성합니다.(heapify)
 4. 원소의 개수만큼 2와 3을 반복 수행합니다.O(n)
 
+```python
+def heapify(li, n, i):
+    # init largest as root
+    largest = i
+    left = 2*i+1
+    right = 2*i+2
+
+
+    if left<n and li[largest]<li[left]:
+        largest = left
+    if right<n and li[largest] < li[right]:
+        largest = right
+    #swap if another max value found
+    if largest !=i:
+        li[i], li[largest] = li[largest],li[i]
+        heapify(li,n,largest)
+
+def heapSort(li):
+    n = len(li)
+    for i in range(n//2-1,-1,-1):
+        heapify(li,n,i)
+    for i in range(n - 1, 0, -1):
+        print(i)
+        print(li) 
+        li[0], li[i] = li[i], li[0]
+        print(li)
+        heapify(li, i, 0)
+        
+
+li = [12,11,13,5,6,7]
+heapSort(li)
+```
+
+이해 가지 않는것이 왜 ㅁ지
 
 
 
