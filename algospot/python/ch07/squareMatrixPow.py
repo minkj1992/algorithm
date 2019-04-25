@@ -1,3 +1,5 @@
+# [matrix class python]("http://code.activestate.com/recipes/578131-a-simple-matrix-class/")
+# [identity,multiply]("https://rosettacode.org/wiki/Matrix-exponentiation_operator#Python")
 from operator import mul
 class Error(Exception):
     pass
