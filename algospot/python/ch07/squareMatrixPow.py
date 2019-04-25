@@ -9,19 +9,26 @@ class MatrixError(Error):
 
 def identity(n):
     return [[(i==j)*1 for i in range(n)]for j in range(n)]
-# Divide and Conquer   
+# Divide and Conquer
+
+# def multiply(m1,m2):
+#     # ERROR HANDLING
+#     if len(m1)!=len(m2) or len(m1[0])!=len(m2[0]):
+#         raise MatrixError("NOT SQUARE MATRIX")
+#     #MULTIPLY
+#     return list(map(
+#         lambda row:
+#         list(map(
+#             lambda *column:
+#             sum(map(mul, row, column)),
+#             *m2)),
+#         m1))
+
 def multiply(m1,m2):
-    # ERROR HANDLING
-    if len(m1)!=len(m2) or len(m1[0])!=len(m2[0]):
-        raise MatrixError("NOT SQUARE MATRIX")
-    #MULTIPLY
-    return list(map(
-        lambda row:
-        list(map(
-            lambda *column:
-            sum(map(mul, row, column)),
-            *m2)),
-        m1))
+    tpos_b = zip(*m2)
+    # ret=[[sum(ea*eb for ea,eb in zip(a,b)) for b in tpos_b] for a in m1]
+    ret=[[sum(ea*eb for ea,eb in zip(a,b)) for a in m1]for b in tpos_b]
+    return ret
 
 def squareMartixPow(A,m):
     # BASE CONDITION
