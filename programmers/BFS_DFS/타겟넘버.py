@@ -1,0 +1,45 @@
+# https://programmers.co.kr/learn/courses/30/lessons/43165
+
+###############################1st try####################################
+def solution(numbers=[1, 1, 1, 1, 1], target=3):
+    dfs(numbers[:],target,0)
+    return answer
+def dfs(lis,target,k):
+    global answer
+    # base condition에 and를 써서 문제가 생겼었다.
+    # RecursionError: maximum recursion depth exceeded while calling a Python object
+    if k==len(lis):
+        if sum(lis)==target:
+            answer +=1
+        return
+    dfs(lis[:],target,k+1)
+    lis[k]*=-1
+    dfs(lis[:],target,k+1)
+
+answer = 0
+print(solution())
+
+###############################2nd try####################################
+# closure를 사용하였다
+# 파이썬에서 list따위는 inner class에서 참조가 가능하다
+# 하지만 단일 변수는 global외에는 참조가 불가능하여 list화 시켜주었다.
+
+def solution(numbers, target):
+    def dfs(visited,pos):
+        # 2. 컨디션 CHECK
+        # DFS는 자체적으로 콜스택이 끝이나면 END 되지만, 여기서는 TARGET과 값은 값인지 확인+5번째 DEPTH 인지 알아야 해서 CONDITION을 넣어줌
+        if pos == len(numbers)-1:
+            if visited==target[0]:
+                answer[0]+=1
+            return
+        # 3. Recursion
+        pos+=1
+        dfs(visited+numbers[pos],pos)
+        dfs(visited-numbers[pos],pos)
+    
+    answer = [0,]
+    target = [target,]
+    # 1. 다음 노드의 값을 가지고 미리 계산하며, 다음 노드의 pos을 전달한다.
+    dfs(0+numbers[0],0)
+    dfs(0-numbers[0],0)
+    return answer[0]
