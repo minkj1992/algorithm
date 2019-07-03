@@ -2,23 +2,35 @@
 ### 솔직히 왜 이런 현상이 일어나는지 모르겠다.
 def solution(begin, target, words):
     def dfs(here=0,cnt=0):
+        # if here == target[0]:
+        #     answer[0] = min(cnt,answer[0])
+        # visited[here]=="GRAY"
+        
+        # for i in adj[here]:
+        #     if visited[i]!="BLACK":
+        #         dfs(i,cnt+1)
+        # if here !=(len(words)-1):
+        #     visited[here] = "BLACK"
+        print(words[here],cnt)
+        if cnt>100:
+            exit()
         if here == target[0]:
             answer[0] = min(cnt,answer[0])
-        visited[here]=="GRAY"
-        
+            print("answer:",answer)
+        elif cnt !=0 and here == 0:
+            return
         for i in adj[here]:
-            if visited[i]!="BLACK":
-                dfs(i,cnt+1)
-        if here !=(len(words)-1):
-            visited[here] = "BLACK"
-         
+            dfs(i,cnt+1)
+
     if target not in words:return 0  
     words.insert(0,begin)   
     # adj에는 words의 idx가 들어간다.
     adj = words2Adj(words)
     target = [words.index(target),]
-    
-    visited = ["WHITE" for i in range(len(words))]
+    print(adj)
+    print(words)
+    print(target)    
+    # visited = ["WHITE" for i in range(len(words))]
     MAX_INTEGER = 9223372036854775807
     answer = [MAX_INTEGER,]
     dfs()
@@ -27,8 +39,9 @@ def solution(begin, target, words):
 def words2Adj(words):
     n=len(words)
     adj = [[] for i in words]
-    for i in range(n-1):
-        for j in range(i+1,n):
+    for i in range(n):
+        for j in range(n):
+            if i==j:continue
             cnt = 0
             for a,b in zip(words[i],words[j]):
                 if a != b: 
@@ -37,10 +50,12 @@ def words2Adj(words):
                         break
             if cnt==1:
                 adj[i].append(j)
+    
     return adj
 
 
-# print(solution("hit","cog",["hot","dot", "dog", "lot", "log", "cog"]))
+print(solution("hit","bot",["bot","hot", "dog", "lot", "log", "cog","pop"]))
 # print(solution("hit","cog",["hot","dot", "dog", "lot", "log"]))
 
+# ["hit","bot","hot", "dog", "lot", "log", "cog","pop"]
 
