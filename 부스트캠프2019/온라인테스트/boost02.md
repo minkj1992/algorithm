@@ -76,3 +76,38 @@ print(solution(a,b))
 # 2nd try
 
 [링크](https://drive.google.com/drive/u/1/folders/14o1cdGnjJ-Q6jsB96LHQxeGOCRMPZxkm)
+
+# 3rd try
+- 모든 index변수는 대문자로 지정하자
+- 모든 반복되는 로직은 함수로 따로 빼자
+- `arr_dic = {key:[counter,key]}`
+
+```python
+from collections import defaultdict
+
+def solution(arr1,arr2):
+    arr1 = max_pair(arr1)
+    arr2 = max_pair(arr2)
+    NO_PAIR = 1
+    PAIR_CNT = 0
+
+    if arr1[PAIR_CNT] != NO_PAIR or arr2[PAIR_CNT] != NO_PAIR:
+        if arr1 > arr2:
+            return 1
+        elif arr1<arr2:
+            return 2
+    return 0    # 페어가 NO_PAIR 또는 같이 같은 경우
+
+def max_pair(arr):
+    PAIR_CNT = 0
+    arr_dic = defaultdict(lambda: [0,0])
+    for key in arr:
+        arr_dic[key] = [min(4,arr_dic[key][PAIR_CNT]+1),key]
+    return max(arr_dic.values())
+```
+
+# 4th try
+- 만약 `Counter`를 사용하여 4이상인 카운트는   
+```python
+
+```
