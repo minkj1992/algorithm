@@ -1,5 +1,6 @@
 # [S/W 문제해결 기본] 3일차 - 회문1
 
+> [문제링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14QpAaAAwCFAYi)
 ## 1st try
 ```python
     for y in range(8-window+1):
@@ -34,7 +35,65 @@ for tc in range(1,2):
 ```
 
 ```java
+import java.io.*;
 
+class Solution {
+    static final int T = 10;
+    static final int N = 8;
+    static int window;
+    static char[][] board = new char[N][N];
+
+
+    public static boolean rowCheck(int y, int x) {
+        for (int i = 0; i < window / 2; ++i) {
+            if (board[y][x + i] != board[y][x + window - 1 - i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean colCheck(int y, int x) {
+        for (int i = 0; i < window / 2; ++i) {
+            if (board[y + i][x] != board[y + window - 1 - i][x]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) throws IOException {
+        try (
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out))
+        ) {
+
+            for (int tc = 1; tc <= T; ++tc) {
+                window = Integer.parseInt(br.readLine());
+
+                for (int row = 0; row < N; ++row) {
+                    board[row] = br.readLine().toCharArray();
+                }
+
+                int result = 0;
+                for (int y = 0; y < N; ++y) {
+                    for (int x = 0; x < N; ++x) {
+                        if (y + window <= N) {
+                            result += (colCheck(y, x) ? 1 : 0);
+                        }
+
+                        if (x + window <= N) {
+                            result += (rowCheck(y, x) ? 1 : 0);
+                        }
+                    }
+                }
+                bw.append("#" + tc + " " + result + "\n");
+            }
+            bw.flush();
+        }
+    }
+
+}
 ```
 
 ## 참고할 소스코드
