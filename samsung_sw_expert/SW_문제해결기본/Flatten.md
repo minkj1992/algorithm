@@ -131,3 +131,64 @@ for tc in range(1,11):
 f.close()
 
 ```
+
+- (0), 메모리 1위, time 4위
+```java
+import java.io.*;
+
+class Solution {
+
+    private static final int T = 10;
+
+    public static int getMinValue(int a,int b, int c) {
+        int minValue = (a>b) ? b: a;
+        return (minValue > c) ? c : minValue;
+    }
+
+
+    public static int dump(int n, int[] counter) {
+        int r = counter.length -1;
+        int l = 0;
+        while (true) {
+            for(;counter[l]==0;l++){}
+            for(;counter[r]==0;r--){}
+
+            if ((r-l<=1)||(n==0)) break;
+
+            int move = getMinValue(n,counter[l],counter[r]);
+            n -= move;
+            counter[l+1]+=move;
+            counter[r-1]+=move;
+            counter[l]-=move;
+            counter[r]-=move;
+        }
+        return r-l;
+    }
+
+    public static void main(String[] args){
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out))) {
+
+            for (int tc = 1; tc <= T; tc++) {
+                int n = Integer.parseInt(br.readLine());
+
+                int[] counter = new int[100+1];
+                String[] line = br.readLine().split(" ");
+                for (String s:line) {
+                    ++counter[Integer.parseInt(s)];
+                }
+
+                int result = dump(n,counter);
+                bw.write("#" + tc + " " + result + "\n");
+            }
+            bw.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+- `counter`를 활용한 값 계산
+- java에서 min, max, sort를 편하게 하는 방법 없을까? 꼭 stream 써야할까?
