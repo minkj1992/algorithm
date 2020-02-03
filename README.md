@@ -1,26 +1,25 @@
-[참고 영상](https://www.youtube.com/watch?v=ukkLCl9yBvE)
-# 공부 순서
-1. 기본적인 문법 
-    -`python`
-    - `c++`
-2. 기초 100제
-    - `코드업`
-3. 알고리즘
-- 목표 : 코드포스 BLUE or 삼성 역량 테스트 B형 정도 수준 쌓기
-- `그리디 알고리즘`x50 -> `탐색(BFS,DFS)`x50 -> `기초 동적프로그래밍`x50    
-    
-    - `백준`
-    - `코드포스`
-    - `프로그래머스`
+# algorithm
 
-- 이후, `그래프이론` -> `중급 및 고급 동적 프로그래밍`, `문자열`
+## 2019
+- 삼성 sw expert A형 2회 취득
 
-    
-4. 기출 문제
-    - 삼성: 백준
-    - 카카오: 프로그래머스
+## 2020 이직 학습 계획
+> A+ 취득, B형 취득
+```
+1. 시뮬레이션
+2. 순열 / 조합
+3. Union-find, Trie
+4. Regex
+```
 
-# 공부 목표
-- `first goal` 50-60시간 채우기: 하루 2시간 한달
-- 추후 목표 추가
-- `samsung`, `Line`, `Kakao`, `Naver`
+- 2월
+    - 1일
+        - [시뮬레이션, 복습] `구슬탈출`
+        - 조합 Python module 정리
+        - bitmasking 정리
+    - 2일
+        - [조합],[Badooooooooooooooook](https://www.acmicpc.net/problem/16988)
+        - 순열 Python module 정리
+    - 3일
+        - [암호만들기](https://www.acmicpc.net/problem/1759)
+        - [연구소](https://www.acmicpc.net/problem/14502)
