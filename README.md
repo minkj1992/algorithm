@@ -23,3 +23,10 @@
     - 3일
         - [암호만들기](https://www.acmicpc.net/problem/1759)
         - [연구소](https://www.acmicpc.net/problem/14502)
+
+    - 4일
+        - [게리멘더링2](https://www.acmicpc.net/problem/17779)
+    - 5일
+        - [게리멘더링2](https://www.acmicpc.net/problem/17779)
+        - []()
+        - [차량 정비소]()
