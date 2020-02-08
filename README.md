@@ -28,5 +28,8 @@
         - [게리멘더링2](https://www.acmicpc.net/problem/17779)
     - 5일
         - [게리멘더링2](https://www.acmicpc.net/problem/17779)
-        - []()
+    - 6일
+        - [게리멘더링2](https://www.acmicpc.net/problem/17779) 완료
+    - 8일
+        - [백조의 호수]()
         - [차량 정비소]()
