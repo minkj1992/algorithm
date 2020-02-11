@@ -39,6 +39,10 @@
         - [프린터 큐](https://www.acmicpc.net/problem/1966)
             - `heapq`에 대하여 학습
     - 10일        
-        - [연구소3]
-        - [차량정비소]
+        - [연구소3](http://boj.kr/17142)
+        - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
+    
+    - 11일
+        - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
+        
         
