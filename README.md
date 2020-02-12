@@ -11,6 +11,8 @@
 3. Union-find, Trie
 4. Regex
 ```
+- 실패
+    - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
 
 - 2월
     - 1일
@@ -43,6 +45,9 @@
         - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
     
     - 11일
-        - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
+        - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy) (x)
+    - 12일
+        - 시뮬레이션
+            - 
         
         
