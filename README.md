@@ -11,6 +11,10 @@
 3. Union-find, Trie
 4. Regex
 ```
+- 다시 풀어볼 만한 문제
+    - 게리멘더링 2
+    - 환승
+
 - 실패
     - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
 
@@ -48,6 +52,9 @@
         - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy) (x)
     - 12일
         - 시뮬레이션
-            - 
-        
+            - [환승](https://www.acmicpc.net/problem/5214)
+                - visited 버퍼를 두어 메모리 초과를 방지한다. ( 즉 hyper tube를 노드로 계산하여 분할하여 저장한다. )
+                - 하나의 리스트에 수많은 조합의 엣지 노드를 넣어주면 메모리 초과.
+    - 13일
+        - 시뮬레이션
         
