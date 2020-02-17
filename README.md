@@ -69,3 +69,5 @@
     - 17일
         - 새로운 게임2 (x)
         - 탈출 (0)
+        - [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)
+        
