@@ -15,9 +15,10 @@
     - 게리멘더링 2
     - 환승
 
+
 - 실패
     - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
-
+    - [새로운 게임2](https://www.acmicpc.net/problem/17837)
 - 2월
     - 1일
         - [시뮬레이션, 복습] `구슬탈출`
@@ -63,3 +64,8 @@
         - 레이저 통신
     - 15일
         - 새로운 게임2 하는중 
+    - 16일
+        - 새로운 게임2
+    - 17일
+        - 새로운 게임2 (x)
+        - 
