@@ -69,5 +69,11 @@
     - 17일
         - 새로운 게임2 (x)
         - 탈출 (0)
-        - [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985)
-        
+        - [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985) (x)
+    - 19일
+        - 새로운 게임2 (0)
+    - 21일
+        - [Maaaaaaaaaze](https://www.acmicpc.net/problem/16985) (o)
+        - [[10971]외판원 순회2](https://www.acmicpc.net/)
+        - [[8982]수족관 1](https://www.acmicpc.net/problem/8982)
+        - [[11559]Puyo Puyo](https://www.acmicpc.net/problem/11559)
