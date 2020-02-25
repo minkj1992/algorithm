@@ -14,11 +14,11 @@
 - 다시 풀어볼 만한 문제
     - 게리멘더링 2
     - 환승
-
+    - 새로운 게임2
+    - 수족관 1
 
 - 실패
     - [차량정비소](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
-    - [새로운 게임2](https://www.acmicpc.net/problem/17837)
 - 2월
     - 1일
         - [시뮬레이션, 복습] `구슬탈출`
@@ -77,3 +77,7 @@
         - [[10971]외판원 순회2](https://www.acmicpc.net/)
         - [[8982]수족관 1](https://www.acmicpc.net/problem/8982)
         - [[11559]Puyo Puyo](https://www.acmicpc.net/problem/11559)
+
+    - 25일
+        - [ ] 수족관 1
+        - [ ] 주사위 윷놀이
