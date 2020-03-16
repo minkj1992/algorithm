@@ -88,7 +88,13 @@
 
 - 3월
     - 1일
-        - 다리 만들기(https://www.acmicpc.net/problem/2146)
-        - 버스 갈아타기(https://www.acmicpc.net/problem/2536)
-        - 열쇠(https://www.acmicpc.net/problem/9328)
-        - 게임(https://www.acmicpc.net/problem/1103)
+        - [v] 다리 만들기(https://www.acmicpc.net/problem/2146)
+        - [ ] 버스 갈아타기(https://www.acmicpc.net/problem/2536)
+
+    - 2일
+        - [v] 열쇠(https://www.acmicpc.net/problem/9328)
+        - [v] 카카오, 블록이동하기(https://programmers.co.kr/learn/courses/30/lessons/60063)
+
+    - 3일
+    - 4일
+        - [ ] 버스 갈아타기(https://www.acmicpc.net/problem/2536)
