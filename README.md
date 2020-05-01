@@ -1,4 +1,4 @@
-# algorithm
+# Algorithm
 
 ## 2019
 - 삼성 sw expert A형 2회 취득
@@ -98,3 +98,11 @@
     - 3일
     - 4일
         - [ ] 버스 갈아타기(https://www.acmicpc.net/problem/2536)
+
+- 5월
+  - DP, BST, 이분탐색, 백준 code.plus
+  - 1일
+    - 프로그래머스 고득점 kit
+      - DP
+      - 이분탐색
+    - 프로그래머스 실전 시험들
