@@ -106,3 +106,6 @@
       - DP
       - 이분탐색
     - 프로그래머스 실전 시험들
+  - 2일
+    - [v] 프로그래머스 예산 문제(https://programmers.co.kr/learn/courses/30/lessons/43237)
+    - 
