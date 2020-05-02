@@ -107,5 +107,9 @@
       - 이분탐색
     - 프로그래머스 실전 시험들
   - 2일
-    - [v] 프로그래머스 예산 문제(https://programmers.co.kr/learn/courses/30/lessons/43237)
-    - 
+    - 이분 탐색
+      - [v] 프로그래머스 예산 문제(https://programmers.co.kr/learn/courses/30/lessons/43237)
+      - [v] 프로그래머스 입국심사 문제
+      - [ ] 프로그래머스 징검다리 문제
+    - 카카오 2019 인턴 문제
+      -  
