@@ -31,8 +31,34 @@ class Solution {
     }
 }
 ```
+## 2nd try(20.05.15)
+- tc: O(n^2)
+- sc: O(n)
+```java
+import java.util.HashMap;
+import java.util.Map;
 
-## 2nd try
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int answer = 0;
+        for (int i = 0; i < s.length(); i++) {
+            Map<Character, Boolean> map = new HashMap<>();
+            int subLength = 0;
+            for (int j = i; j < s.length(); j++, ++subLength) {
+                Character c = s.charAt(j);
+                if (map.containsKey(c)) {
+                    break;
+                }
+                map.put(c, true);
+            }
+            answer = Math.max(answer, subLength);
+        }
+        return answer;
+    }
+}
+```
+
+## 3rd try
 > Sliding Window
 - time cpx = O(2n) = O(n)
 - spcae cpx = O(min(n,m))
@@ -61,14 +87,16 @@ class Solution {
 }
 ```
 
-## 3rd try
+## 4th try
 > Sliding Window Optimized
+
+- TC: O(n) 
 ```java
+//20.05.14
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character
-        // try to extend the range [i, j]
         for (int j = 0, i = 0; j < n; j++) {
             if (map.containsKey(s.charAt(j))) {
                 i = Math.max(map.get(s.charAt(j)), i);
@@ -77,6 +105,47 @@ public class Solution {
             map.put(s.charAt(j), j + 1);
         }
         return ans;
+    }
+}
+```
+```java
+//20.05.15
+import java.util.HashMap;
+import java.util.Map;
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int n = s.length();
+        int answer = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        for (int end = 0, start = 0; end < n; end++) {
+            char c = s.charAt(end);
+            if (map.containsKey(c)) { start = Math.max(map.get(c),start); }
+            answer = Math.max(end-start+1, answer);
+            map.put(c,end+1);
+        }
+        return answer;
+    }
+}
+```
+
+## 5th try (ASCII Array)
+- Hash Key 만드는 overhead 줄인 버전
+```java
+import java.util.HashMap;
+import java.util.Map;
+
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int answer = 0;
+        int n = s.length();
+        int[] index = new int[128];
+        for (int j = 0, i = 0; j <n; j++) {
+            i = Math.max(index[s.charAt(j)], i);
+            answer = Math.max(answer, j - i + 1);
+            index[s.charAt(j)] = j + 1;
+        }
+        return answer;
     }
 }
 ```
