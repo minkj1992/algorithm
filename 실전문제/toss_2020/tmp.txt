@@ -1,0 +1,1 @@
+[{"pk": 1,"value": "Toss Team","is_active": true,"parent": null},{"pk": 2,"value": "송금","is_active": true,"parent": 1},{"pk": 3,"value": "착오송금","is_active": true,"parent": 99},{"pk": 4,"value": "기타","is_active": true,"parent": 98}]/기타
