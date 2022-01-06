@@ -38,5 +38,9 @@ def is_interleaved(s1: str, s2: str, s3: str) -> bool:
 s1 = "aabcc"
 s2 = "dbbca"
 s3 = "aadbbcbcac"
+is_interleaved(s1, s2, s3)
 
+s1 = "aaaaa"
+s2 = "aaaaa"
+s3 = "aaaaaaaaaa"
 is_interleaved(s1, s2, s3)
