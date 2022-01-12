@@ -1,7 +1,7 @@
 def merge_sort(arr):
     def merge(left, right):
-        l, r = 0, 0
         result = []
+        l = r = 0
         while l < len(left) and r < len(right):
             if left[l] < right[r]:
                 result.append(left[l])
@@ -9,7 +9,8 @@ def merge_sort(arr):
             else:
                 result.append(right[r])
                 r += 1
-        return result + left[l:] + right[r:]  # append leftover
+
+        return result + left[l:] + right[r:]
 
     if len(arr) <= 1:
         return arr
@@ -17,5 +18,5 @@ def merge_sort(arr):
     return merge(merge_sort(arr[:mid]), merge_sort(arr[mid:]))
 
 
-arr = [5, 6, 4, 3, 2, 1]
-assert [1, 2, 3, 4, 5, 6] == merge_sort(arr)
+arr = [5, 6, 7, 8, 9, 1, 2, 3, 4]
+assert [1, 2, 3, 4, 5, 6, 7, 8, 9] == merge_sort(arr)
